@@ -60,16 +60,18 @@ console.log(isEligibleToVote(17, "UK"));
 
 // passwordStrength 
 
-function passwordStrength(password){
-    if(password >= 12 ){
-        console.log("Strong password")
-    } else if (password >= 8 ){
-        console.log("Mediumm ")
-    } else{
-        console.log("Weak af password")
+function passwordStrength(password) {
+    if (password.length >= 12) {
+        return "Strong password";
+    } else if (password.length >= 8) {
+        return "Medium";
+    } else {
+        return "Weak af password";
     }
 }
 
-console.log(passwordStrength(18))
-console.log(passwordStrength(10))
-console.log(passwordStrength(5))
+console.log(passwordStrength("helloworld123")); // Strong password
+console.log(passwordStrength("pass1234"));       // Medium
+console.log(passwordStrength("123"));            // Weak af password
+
+
